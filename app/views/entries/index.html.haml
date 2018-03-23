@@ -1,0 +1,9 @@
+.container
+  - @entries.each do |entry|
+    .panel.panel-default
+      .panel-body
+        = link_to entry.title, entry.url.html_safe
+        \-
+        %i
+          published #{time_ago_in_words(entry.published)} ago.
+

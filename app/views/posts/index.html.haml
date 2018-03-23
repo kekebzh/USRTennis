@@ -1,0 +1,31 @@
+.container-fluid
+  .row
+    .col-sm-12
+    %h4.text.center Actualités du Club
+    .col-sm-12
+    .col-sm-12
+      .card-deck
+        .card.mb-6
+          .view.overlay
+            %img.img-fluid{:alt => "Card image cap", :src => "https://mdbootstrap.com/img/Photos/Others/images/16.jpg"}/
+            %a{:href => "#!"}
+              .mask.rgba-white-slight
+          .card-body
+            %h4.card-title Card title
+            %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+            %button.btn.btn-light-blue.btn-md{:type => "button"} Read more
+        .card.mb-6
+          .view.overlay
+            %img.img-fluid{:alt => "Card image cap", :src => "https://mdbootstrap.com/img/Photos/Others/images/16.jpg"}/
+            %a{:href => "#!"}
+              .mask.rgba-white-slight
+          .card-body
+            %h4.card-title Card title
+            %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+            %button.btn.btn-light-blue.btn-md{:type => "button"} Read more
+  .row
+    .col-sm-12
+    %h4 Actualités Tennis
+    = render 'entries/index'
+    
+  

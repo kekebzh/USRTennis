@@ -1,0 +1,6 @@
+.card
+  %ul.list-group.list-group-flush
+  - Entry.all.order('published desc').limit(5).each do |entry|
+    %li.list-group-item
+      = link_to entry.title, entry.url.html_safe 
+      %i publié il y a #{time_ago_in_words(entry.published)}.

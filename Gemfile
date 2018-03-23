@@ -33,6 +33,7 @@ gem 'high_voltage'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'feedjira'
 gem 'paperclip'
 gem 'therubyracer', :platform=>:ruby
 
