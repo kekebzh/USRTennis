@@ -1,31 +1,57 @@
-.container-fluid
+%section.py-4.text-center.text-lg-left
+  %h2.h2.font-weight-bold.text-center.mb-5.pt-4 Actualités du Club
+  %hr.mb-5.mt-5.pb-3
   .row
-    .col-sm-12
-    %h4.text.center Actualités du Club
-    .col-sm-12
-    .col-sm-12
-      .card-deck
-        .card.mb-6
-          .view.overlay
-            %img.img-fluid{:alt => "Card image cap", :src => "https://mdbootstrap.com/img/Photos/Others/images/16.jpg"}/
-            %a{:href => "#!"}
-              .mask.rgba-white-slight
-          .card-body
-            %h4.card-title Card title
-            %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-            %button.btn.btn-light-blue.btn-md{:type => "button"} Read more
-        .card.mb-6
-          .view.overlay
-            %img.img-fluid{:alt => "Card image cap", :src => "https://mdbootstrap.com/img/Photos/Others/images/16.jpg"}/
-            %a{:href => "#!"}
-              .mask.rgba-white-slight
-          .card-body
-            %h4.card-title Card title
-            %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-            %button.btn.btn-light-blue.btn-md{:type => "button"} Read more
+    .col-lg-5.col-xl-5.pb-3
+      .view.overlay.rounded.z-depth-2
+        %img.img-fluid{:alt => "Sample image for first version of blog listing", :src => "https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"}/
+        %a
+          .mask.rgba-white-slight
+    .col-lg-7.col-xl-7
+      %a.green-text{:href => ""}
+        %h6.font-weight-bold.pb-1
+          %i.fa.fa-cutlery
+          Food
+      %h3.mb-4.font-weight-bold.dark-grey-text
+        %strong This is title of the news
+      %p
+        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+        placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis debitis
+        aut rerum.
+      %p
+        by
+        = succeed "," do
+          %a
+            %strong Carine Fox
+      %a.btn.btn-success.btn-md.mb-3 Read more
+  %hr.mb-5.mt-5.pb-3/
   .row
-    .col-sm-12
-    %h4 Actualités Tennis
-    = render 'entries/index'
-    
+    .col-lg-7.col-xl-7.pb-3
+      %a.pink-text{:href => ""}
+        %h6.font-weight-bold.pb-1
+          %i.fa.fa-image
+          Lifestyle
+      %h3.mb-4.font-weight-bold.dark-grey-text
+        %strong This is title of the news
+      %p
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+        atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et
+        dolorum fuga.
+      %p
+        by
+        = succeed "," do
+          %a
+            %strong Carine Fox
+      %a.btn.btn-pink.btn-md.mb-3 Read more
+    .col-lg-5.col-xl-5.mb-5
+      .view.overlay.rounded.z-depth-2
+        %img.img-fluid{:alt => "Second image in the first version of blog listing", :src => "https://mdbootstrap.com/img/Photos/Others/img%20(34).jpg"}/
+        %a
+          .mask.rgba-white-slight
+
+%section.py-4.text-center.text-lg-left
+  %h2.h2.font-weight-bold.text-center.mb-5.pt-4 Actualités Tennis
+  %hr.mb-5.mt-5.pb-3
+  = render 'entries/index'
+  
   
