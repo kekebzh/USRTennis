@@ -12,4 +12,12 @@
       = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'
-      = yield
+      .container-fluid
+        .row
+          .col-sm-1
+          .col-sm-7
+            = yield
+          .col-sm-3
+            = render 'layouts/rightbar'
+    %footer
+      = render 'layouts/footer'
