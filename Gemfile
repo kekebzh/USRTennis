@@ -31,6 +31,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'devise'
+gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 
 group :development do
