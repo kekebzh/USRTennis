@@ -1,5 +1,6 @@
 = simple_form_for @post do |f|
   = f.collection_select(:category_id, Category.all, :id, :name, {prompt: "Choose a category" })
+  = f.input :image, as: :file
   = f.input :title
   = f.input :content
   = f.button :submit

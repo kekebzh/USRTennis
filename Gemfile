@@ -26,12 +26,13 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'paperclip'
 gem 'therubyracer', :platform=>:ruby
 
 group :development do
