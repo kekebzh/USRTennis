@@ -14,3 +14,13 @@
  *= require_self
  */
 @import "bootstrap";
+
+#carouselExampleSlidesOnly {
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: cover;  
+    height: 220px;
+    margin-bottom: 20px; 
+
+}
