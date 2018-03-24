@@ -1,5 +1,5 @@
 !!!
-%html
+%html.full-height{:lang => "en"}
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Usr Tennis'
@@ -14,10 +14,10 @@
       = render 'layouts/messages'
       .container-fluid
         .row
-          .col-sm-1
-          .col-sm-7
+          .col-sm-8
             = yield
-          .col-sm-3
+            #remote_container
+          .col-sm-4
             %br
             %br
             = render 'layouts/rightbar'

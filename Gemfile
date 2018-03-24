@@ -28,6 +28,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap'
 gem 'font-awesome-rails'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'jquery-rails'

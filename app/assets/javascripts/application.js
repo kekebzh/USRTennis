@@ -16,5 +16,8 @@
 //= require popper
 //= require bootstrap
 //= require mdb
+//= require moment
+//= require fullcalendar
+//= require daterangepicker
 //= require turbolinks
 //= require_tree .
