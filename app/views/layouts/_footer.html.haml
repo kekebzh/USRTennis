@@ -1,45 +1,25 @@
 %footer.page-footer.font-small.stylish-color-dark.pt-4.mt-4
-  / Footer Links
   .container.text-center.text-md-left
-    / Footer links
     .row.text-center.text-md-left.mt-3.pb-3
-      / First column
-      .col-md-3.col-lg-3.col-xl-3.mx-auto.mt-3
-        %h6.text-uppercase.mb-4.font-weight-bold Company name
-        %p
-      / /.First column
-      %hr.w-100.clearfix.d-md-none/
-      %hr.w-100.clearfix.d-md-none/
-      %hr.w-100.clearfix.d-md-none/
-      / Fourth column
-      .col-md-4.col-lg-3.col-xl-3.mx-auto.mt-3
+      .col-md-4.col-lg-4.col-xl-4.mx-auto.mt-3
         %h6.text-uppercase.mb-4.font-weight-bold Contact
         %p
           %i.fa.fa-home.mr-3
-          
+          Salle Omnisport du Morbic, 9 Rue du Morbic, 29800 La Roche-Maurice
         %p
           %i.fa.fa-envelope.mr-3
-          
+          usrochoisetennis@gmail.com
         %p
           %i.fa.fa-phone.mr-3
-          
-      / /.Fourth column
+          02 98 20 58 89
+      %hr.w-100.clearfix.d-md-none
+      .col-md-8.col-lg-8.col-xl-8.mx-auto.mt-3
+        %h6.text-uppercase.mb-4.font-weight-bold Nous Trouver
+        .map-responsive
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "250", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.3002503751613!2d-4.206199084199359!3d48.46995417925128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48114d6fb17c2e83%3A0x4fceef1f5d02e818!2sSALLE+OMNISPORTS+DU+MORBIC!5e0!3m2!1sfr!2sfr!4v1521905408021", :style => "border:0", :width => "900"}
+      / /.Second column
     / Footer links
-    %hr/
-    .row.py-3.d-flex.align-items-center
-      / Grid column
-      .col-md-8.col-lg-8
-        / Copyright
-        %p.text-center.text-md-left.grey-text
-          © 2018 Copyright:
-          %strong USRTennis
-        / /.Copyright
-      / Grid column
-      / Grid column
-      .col-md-4.col-lg-4.ml-lg-0
-        / Social buttons
-        .text-center.text-md-right
-          %ul.list-unstyled.list-inline
-            %li.list-inline-item
-              %a.btn-floating.btn-sm.rgba-white-slight.mx-1
-                %i.fa.fa-facebook
+  .footer-copyright.py-2.text-center
+    %p.text-center.grey-text
+      © 2018 Copyright:
+      %strong USRTennis

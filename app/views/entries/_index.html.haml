@@ -1,6 +1,35 @@
-.card
-  %ul.list-group.list-group-flush
-  - Entry.all.order('published desc').limit(5).each do |entry|
-    %li.list-group-item
-      = link_to entry.title, entry.url.html_safe 
-      %i publié il y a #{time_ago_in_words(entry.published)}.
+- @entries = Entry.all.order('published desc').limit(5)       
+- e1 = @entries[0]
+- e2 = @entries[1]
+- e3 = @entries[2]
+.card-group
+  .card.mb-4
+    .view.overlay
+      %img.img-fluid
+        = image_tag e1.enclosure_url
+      %a{:href => e1.url.html_safe}
+        .mask.rgba-white-slight
+    .card-body
+      %p.card-text 
+        = link_to e1.title, e1.url.html_safe
+      %a.button.btn.btn-primary.btn-md{:href => e1.url.html_safe, :type => "button"} Read more
+  .card.mb-4
+    .view.overlay
+      %img.img-fluid
+        = image_tag e2.enclosure_url
+      %a{:href => e2.url.html_safe}
+        .mask.rgba-white-slight
+    .card-body
+      %p.card-text
+        = link_to e2.title, e2.url.html_safe
+      %a.button.btn.btn-primary.btn-md{:href => e2.url.html_safe, :type => "button"} Read more
+  .card.mb-4
+    .view.overlay
+      %img.img-fluid
+        = image_tag e3.enclosure_url
+      %a{:href => e3.url.html_safe}
+        .mask.rgba-white-slight
+    .card-body
+      %p.card-text
+        = link_to e3.title, e3.url.html_safe
+      %a.button.btn.btn-primary.btn-md{:href => e3.url.html_safe, :type => "button"} Read more

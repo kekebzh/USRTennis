@@ -17,12 +17,21 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
 #carouselExampleSlidesOnly {
     width: 100%;
     background-repeat:no-repeat;
     background-position: top center;
     background-size: cover;  
-    height: 280px;
+    height: 230px;
+}
+
+.map-responsive{
+    overflow:hidden;
+    position:relative;
 }
 /* cyrillic-ext */
 @font-face {
