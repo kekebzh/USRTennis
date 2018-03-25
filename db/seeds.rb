@@ -9,3 +9,4 @@
 Category.create(name: 'Actualités')
 Category.create(name: 'Championnat')
 Category.create(name: 'Vie du club')
+Feed.create(name: "L'équipe Tennis", url: "https://www.lequipe.fr/rss/actu_rss_Tennis.xml", description: "Flux rss tennis de l'Equipe" )
