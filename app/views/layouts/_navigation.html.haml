@@ -10,7 +10,7 @@
     / Links
     %ul.navbar-nav.mr-auto
       %li.nav-item.dropdown
-        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Le Club
+        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Le Club
         .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
           %a.dropdown-item{href: "#"} Le Bureau
           %a.dropdown-item{href: "#"} Les Installations
@@ -19,11 +19,58 @@
           %a.dropdown-item{href: "#"} Réglement Interne
           %a.dropdown-item{href: "#"} Qui Sommes Nous?
       %li.nav-item.dropdown
-        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Compétitions
-        .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
-          %a.dropdown-item{href: "#"} 
+        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Compétitions
+        %ul.dropdown-menu.multi-column.columns-4
+          .row
+            .col-sm-3
+              %ul.multi-column-dropdown
+                %a.dropdown-item.disabled{:href => "#"}
+                  %strong CHAMPIONNAT JEUNES
+                %li.divider
+                %li
+                  %a.dropdown-item{:href => "#"} 13/15 ans Filles
+                %li
+                  %a.dropdown-item{:href => "#"} 16/18 ans Filles
+                %li
+                  %a.dropdown-item{:href => "#"} 9/10 ans Garçons
+                %li
+                  %a.dropdown-item{:href => "#"} 11/12 ans Garçons
+                %li
+                  %a.dropdown-item{:href => "#"} 13/15 ans Garçons
+            .col-sm-3
+              %ul.multi-column-dropdown
+                %li
+                  %a.dropdown-item.disabled{:href => "#"}
+                    %strong CHAMPIONNAT SENIORS
+                %li.divider
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe 1 Dames
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe 1 Messieurs
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe 2 Messieurs
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe 3 Messieurs
+            .col-sm-3
+              %ul.multi-column-dropdown
+                %li
+                  %a.dropdown-item.disabled{:href => "#"}
+                    %strong CHAMPIONNAT LOISIRS
+                %li.divider
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe Loisirs
+            .col-sm-3
+              %ul.multi-column-dropdown
+                %li
+                  %a.dropdown-item.disabled{:href => "#"}
+                    %strong CHAMPIONNAT +35
+                %li.divider
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe 1 +35
+                %li
+                  %a.dropdown-item{:href => "#"} Equipe 2 +35
       %li.nav-item.dropdown
-        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Les Cours
+        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Les Cours
         .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
           %a.dropdown-item{href: "#"} Les Groupes 
           %a.dropdown-item{href: "#"} Le Planning
@@ -32,7 +79,7 @@
       %li.nav-item
         %a.nav-link{:href => contact_path} Contact
       %li.nav-item.dropdown
-        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Galeries
+        %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Galeries
         .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
           %a.dropdown-item{href: "#"} Galerie Photos 
           %a.dropdown-item{href: "#"} Galerie Vidéos
@@ -50,7 +97,7 @@
     .mask.rgba-black-light.flex-center
       .container.text-center.white-text
         .white-text.text-center.wow.fadeInUp
-          %h1 USR Tennis
+          %h1 Bienvenue sur le site de l'USR Tennis
           %h5 
           %br/
-          %p 
+          %p
