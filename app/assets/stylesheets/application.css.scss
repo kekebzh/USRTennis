@@ -19,6 +19,10 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.carousel-inner {
+  height: 320px;
+}
+
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
@@ -67,14 +71,6 @@
 .view {
     background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
     background-size: cover;
-}
-
-#carouselExampleSlidesOnly {
-    width: 100%;
-    background-repeat:no-repeat;
-    background-position: top center;
-    background-size: cover;  
-    height: 280px;
 }
 
 .map-responsive{

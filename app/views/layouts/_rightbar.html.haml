@@ -3,36 +3,32 @@
     .col-sm-12
       %h4 Nos Partenaires
     .col-sm-12
-      #carouselExampleSlidesOnly.carousel.slide{"data-ride" => "carousel"}
-        .carousel-inner
+      #carousel-example-1z.carousel.slide.carousel-slide{"data-ride" => "carousel"}
+        .carousel-inner{:role => "listbox"}
           .carousel-item.active
-            %img.d-block.w-100
-              = image_tag("3sets-original.jpeg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('3sets-original.jpeg')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("AMC-automatisme.jpg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('AMC-automatisme.jpg')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("ATOL.jpeg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('ATOL.jpeg')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("carteiadfrance.jpg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('carteiadfrance.jpg')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("demechesavecvous.jpg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('cervoiserie.jpg')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("mbcryo.png", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('demechesavecvous.jpg')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("pubbertrand.jpg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('mbcryo.png')}
           .carousel-item
-            %img.d-block.w-100
-              = image_tag("vin-divin.jpeg", style: 'height:auto;width:100%;')
+            %img.d-block.w-100{:src => image_url('pubbertrand.jpg')}
+          .carousel-item
+            %img.d-block.w-100{:src => image_url('vin-divin.jpeg')}
     .col-sm-12
+      %br
     .col-sm-12
       %h4 Liens Rapides
     .col-sm-12
+      %br
     .col-sm-12
       = link_to 'Planning Championnat', "#", class: 'btn btn-primary btn-block'
     .col-sm-12

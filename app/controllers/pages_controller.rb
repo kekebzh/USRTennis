@@ -1,6 +1,10 @@
+require 'net/http'
+require 'open-uri'
+
 class PagesController < ApplicationController
 
 	def about
+        @source = open("https://mon-espace-tennis.fft.fr").read
 	end
 
 	def partenaires
