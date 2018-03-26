@@ -24,7 +24,9 @@ gem 'simple_form'
 gem 'feedjira'
 gem 'paperclip'
 gem 'therubyracer', :platform=>:ruby
+#gem 'bcrypt', :platform=>:ruby
 gem 'rails_layout'
+gem "binding_of_caller"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
