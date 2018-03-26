@@ -1,14 +1,11 @@
-%nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.stylish-color-dark
-  / Navbar brand
-  %a.navbar-brand
+%nav.navbar.navbar-light.navbar-expand-md.bg-faded.justify-content-center
+  %a.navbar-brand.mr-auto
     = link_to root_path do
       = image_tag "logo.png"
-  %button.navbar-toggler{"aria-controls" => "basicExampleNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#basicExampleNav", "data-toggle" => "collapse", :type => "button"}
+  %button.navbar-toggler{"data-target" => "#collapsingNavbar3", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
-  / Collapsible content
-  #navbarSupportedContent.collapse.navbar-collapse
-    / Links
-    %ul.navbar-nav.mr-auto
+  #collapsingNavbar3.navbar-collapse.collapse.w-100
+    %ul.navbar-nav.w-100.justify-content-center
       %li.nav-item.dropdown
         %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Le Club
         .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
@@ -83,27 +80,17 @@
         .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
           %a.dropdown-item{href: "#"} Galerie Photos 
           %a.dropdown-item{href: "#"} Galerie Vidéos
-      %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-        %li.nav-item
-        - if user_signed_in?
-          %a.nav-link{href: edit_user_registration_path} My Account
+    %ul.nav.navbar-nav.ml-auto.w-100.justify-content-end
+      %li.nav-item
+      - if user_signed_in?
+        %a.nav-link{href: edit_user_registration_path} My Account
+        %a
+          = link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'nav-link'
+      - else
+        %a.nav-link{href: new_user_session_path} Sign in
+        %a.nav-link{href: new_user_registration_path} Sign up
+      %li.nav-item
+      - if user_signed_in?
+        - if current_user.role == "admin"
           %a
-            = link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'nav-link'
-        - else
-          %a.nav-link{href: new_user_session_path} Sign in
-          %a.nav-link{href: new_user_registration_path} Sign up
-      %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-        %li.nav-item
-        - if user_signed_in?
-          - if current_user.role == "admin"
-            %a
-              = link_to "Nouvel Article", new_post_path, :class => 'nav-link'
-.view.intro-2
-  .full-bg-img
-    .mask.rgba-black-light.flex-center
-      .container.text-center.white-text
-        .white-text.text-center.wow.fadeInUp
-          %h1 Bienvenue sur le site de l'USR Tennis
-          %h5 
-          %br/
-          %p
+            = link_to "Nouvel Article", new_post_path, :class => 'nav-link'
