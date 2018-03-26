@@ -12,11 +12,11 @@
       %li.nav-item.dropdown
         %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Le Club
         .dropdown-menu.dropdown-primary{"aria-labelledby" => "navbarDropdownMenuLink"}
-          %a.dropdown-item{href: "#"} Le Bureau
-          %a.dropdown-item{href: "#"} Les Installations
-          %a.dropdown-item{href: "#"} Les Tarifs
-          %a.dropdown-item{href: "#"} L'équipe Enseignante
-          %a.dropdown-item{href: "#"} Réglement Interne
+          %a.dropdown-item{href: le_bureau_path} Le Bureau
+          %a.dropdown-item{href: les_installations_path} Les Installations
+          %a.dropdown-item{href: les_tarifs_path} Les Tarifs
+          %a.dropdown-item{href: equipe_enseignante_path} L'équipe Enseignante
+          %a.dropdown-item{href: reglement_interne_path} Réglement Interne
           %a.dropdown-item{href: "#"} Qui Sommes Nous?
       %li.nav-item.dropdown
         %a#navbarDropdownMenuLink.nav-link.dropdown-toggle.disabled{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"} Compétitions
@@ -92,6 +92,12 @@
         - else
           %a.nav-link{href: new_user_session_path} Sign in
           %a.nav-link{href: new_user_registration_path} Sign up
+      %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+        %li.nav-item
+        - if user_signed_in?
+          - if current_user.role == "admin"
+            %a
+              = link_to "Nouvel Article", new_post_path, :class => 'nav-link'
 .view.intro-2
   .full-bg-img
     .mask.rgba-black-light.flex-center

@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+
+  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :admin_only, :only => [:new, :create]
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -35,5 +38,15 @@ class EventsController < ApplicationController
 
     def event_params
       params.require(:event).permit(:title, :date_range, :start, :end, :color)
+    end
+
+    def admin_only
+        unless current_user.admin?
+            redirect_to root_path, :alert => "Access denied."
+        end
+    end
+
+    def secure_params
+        params.require(:user).permit(:role)
     end
 end

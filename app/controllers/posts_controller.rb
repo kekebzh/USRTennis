@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
 
+    before_action :authenticate_user!, :except => [:show, :index]
+    before_action :admin_only, :only => [:new, :create]
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@post = Post.all
-	end
+    end
 
 	def show
 	end
@@ -39,6 +41,16 @@ class PostsController < ApplicationController
 	end
   
 	private
+
+	def admin_only
+        unless current_user.admin?
+            redirect_to root_path, :alert => "Access denied."
+        end
+    end
+
+    def secure_params
+        params.require(:user).permit(:role)
+    end
 
 	def post_params
 		params.require(:post).permit(:title, :content, :category_id, :image)
