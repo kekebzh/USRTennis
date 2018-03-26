@@ -1,0 +1,19 @@
+- @posts = Post.all.order('created_at desc').limit(5)       
+- p1 = @posts[0]
+%section.py-4.text-center.text-lg-left
+  %h2.h2.font-weight-bold.text-center.mb-5.pt-4 Actualités du Club
+  %hr.mb-5.mt-5.pb-3
+  .row
+    .col-lg-5.col-xl-5.pb-3
+      .view.overlay.rounded.z-depth-2
+        %img.img-fluid
+          = image_tag p1.image, class: 'img-fluid'
+        %a{:href => "#"}
+          .mask.rgba-white-slight
+    .col-lg-7.col-xl-7
+      %h3.mb-4.font-weight-bold.dark-grey-text
+        %strong
+          = p1.title
+      %p
+        = p1.content 
+      %a.btn.btn-success.btn-md.mb-3{:href => post_path(p1), :type => "button"} Read more
