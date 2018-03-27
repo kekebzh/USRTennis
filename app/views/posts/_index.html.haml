@@ -8,7 +8,7 @@
     .col-lg-5.col-xl-5.pb-3
       .view.overlay.rounded.z-depth-2
         %img.img-fluid
-          = image_tag p1.image, class: 'img-fluid'
+          = image_tag p1.image.url, class: 'img-fluid'
         %a{:href => post_path(p1)}
           .mask.rgba-white-slight
     .col-lg-7.col-xl-7
@@ -38,6 +38,6 @@
     .col-lg-5.col-xl-5.mb-5
       .view.overlay.rounded.z-depth-2
         %img.img-fluid
-          = image_tag p2.image, class: 'img-fluid'
+          = image_tag p2.image.url, class: 'img-fluid'
         %a{:href => post_path(p2)}
           .mask.rgba-white-slight
