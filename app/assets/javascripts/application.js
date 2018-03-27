@@ -20,4 +20,5 @@
 //= require fullcalendar
 //= require daterangepicker
 //= require turbolinks
+//= require ckeditor/init
 //= require_tree .

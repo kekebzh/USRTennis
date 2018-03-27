@@ -67,7 +67,12 @@ GEM
       xpath (>= 2.0, < 4.0)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
     climate_control (0.2.0)
+    cocaine (0.6.0)
+      terrapin (= 0.6.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -291,6 +296,7 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara (~> 2.13)
+  ckeditor
   coffee-rails (~> 4.2)
   devise
   feedjira
